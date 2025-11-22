@@ -18,13 +18,14 @@ export async function requestNotificationPermission() {
   console.log("Requesting notification permission...");
 
   const status = await Notification.requestPermission();
+  console.log(status)
   if (status !== "granted") {
     alert("Permission not granted.");
     return null;
   }
 
   const token = await getToken(messaging, {
-    vapidKey: "YOUR_VAPID_KEY",
+    vapidKey: "BIN1-b8kmOMmwwjyicy9mSEBSv_5L10JuN3oWEdQ8WqluV2_AgnyjQxyX1J1O_P_ceCzy9r9ms9C1wjZspnehcM",
   });
 
   if (!token) {
