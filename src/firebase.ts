@@ -2,11 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDwIdoVSoXaZ-UrjZ6IJQL_gLYEl3QfX54",
+  authDomain: "fir-notification-c54f7.firebaseapp.com",
+  projectId: "fir-notification-c54f7",
+  storageBucket: "fir-notification-c54f7.firebasestorage.app",
+  messagingSenderId: "307625421454",
+  appId: "1:307625421454:web:c6972d17ae6b170f1637df",
+  measurementId: "G-9SNPNQEZQ1",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -22,7 +24,7 @@ export async function requestNotificationPermission() {
   }
 
   const token = await getToken(messaging, {
-    vapidKey: "YOUR_VAPID_KEY"
+    vapidKey: "YOUR_VAPID_KEY",
   });
 
   if (!token) {
